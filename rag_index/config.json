@@ -1,0 +1,12 @@
+{
+  "embed_model_name": "all-MiniLM-L6-v2",
+  "ollama_model_name": "mistral:7b-instruct",
+  "ollama_base_url": "http://localhost:11434",
+  "pdf_path": "module1-slides.pdf",
+  "pdf_filename": "module1-slides.pdf",
+  "chunk_size": 500,
+  "chunk_overlap": 75,
+  "num_pages": 92,
+  "num_chunks": 93,
+  "embedding_dimension": 384
+}

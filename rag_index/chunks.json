@@ -1,0 +1,746 @@
+[
+  {
+    "chunk_id": "p1_c0",
+    "text": "Module 1: Introduction to MLOps\nProduction AI: An Engineering Guide\nTheja T ulabandhula\nJanuary 10, 2026\nUniversity of Illinois Chicago\n1",
+    "page_number": 1,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 137
+  },
+  {
+    "chunk_id": "p2_c0",
+    "text": "Overview\nGetting Started (Prerequisites)\nFoundations of ML Systems\nReproducibility and Dependencies\nCI/CD and Automation\nPipelines and Artifacts\nArchitectural Considerations\nHands-On Demos\nLab Exercise\nAssessments\nKey T akeaways\n2",
+    "page_number": 2,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 230
+  },
+  {
+    "chunk_id": "p3_c0",
+    "text": "Overview",
+    "page_number": 3,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 8
+  },
+  {
+    "chunk_id": "p4_c0",
+    "text": "Module Overview (cont.)\nWhy do 87% of ML projects never make it to production?\n• This module establishes the conceptual foundations of MLOps\n• Introduces the complete ML/AI lifecycle\n• Covers essential software engineering practices\n• Explores architectural differences between traditional ML and LLM-based systems\nAfter completing this module, you will understand how ML systems move from\ndevelopment to production.\n3",
+    "page_number": 4,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 418
+  },
+  {
+    "chunk_id": "p5_c0",
+    "text": "What Y ou’ll Learn (cont.)\nBy the end of this module, you will be able to:\n1. Map any ML project to the six lifecycle stages\n2. Set up reproducible project environments with version control\n3. Distinguish between traditional ML and LLM-based system architectures\n4. Identify and prevent common sources of ML technical debt\n4",
+    "page_number": 5,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 324
+  },
+  {
+    "chunk_id": "p6_c0",
+    "text": "Module Roadmap (cont.)\nGetting Started (Prerequisites)\n↓\nFoundations of ML Systems\n↓\nReproducibility & Dependencies\n↓\nCI/CD and Automation\n↓\nPipelines and Artifacts\n↓\nArchitectural Considerations\n5",
+    "page_number": 6,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 197
+  },
+  {
+    "chunk_id": "p7_c0",
+    "text": "6",
+    "page_number": 7,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 1
+  },
+  {
+    "chunk_id": "p8_c0",
+    "text": "Getting Started (Prerequisites)",
+    "page_number": 8,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 31
+  },
+  {
+    "chunk_id": "p9_c0",
+    "text": "Software Setup Overview (cont.)\nSoftware Minimum Version Purpose\nPython 3.10+ Core programming language\nGit 2.30+ Version control\npip 21.0+ Package management\nvenv (built-in) Virtual environments\npytest 7.0+ T esting framework\n7",
+    "page_number": 9,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 228
+  },
+  {
+    "chunk_id": "p10_c0",
+    "text": "Software Setup Overview (cont.)\n￿ See: Software Setup: Module 1\n8",
+    "page_number": 10,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 65
+  },
+  {
+    "chunk_id": "p11_c0",
+    "text": "Verification Checklist (cont.)\n9",
+    "page_number": 11,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 32
+  },
+  {
+    "chunk_id": "p12_c0",
+    "text": "Verification Checklist (cont.)\n# 1. Python version\npython3 --version\n# Expected: Python 3.10.x or higher\n# 2. Git version\ngit--version\n# Expected: git version 2.30.x or higher\n# 3. pip version\npip--version\n# Expected: pip 21.x or higher\n# 4. venv works\npython3 -mvenv--help |head-1\n# Expected: usage: venv [-h] ...\n￿ See: Software Setup: Module 110",
+    "page_number": 12,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 348
+  },
+  {
+    "chunk_id": "p13_c0",
+    "text": "Command Line Basics (cont.)\nWhy CLI matters for MLOps:\n• Git is primarily a command-line tool\n• Virtual environments are created and activated via CLI\n• CI pipelines execute shell commands\n• Docker and Kubernetes are controlled via CLI\n• Remote servers typically only have CLI access\n￿ See: Command Line Basics for MLOps\n11",
+    "page_number": 13,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 323
+  },
+  {
+    "chunk_id": "p14_c0",
+    "text": "Essential CLI Commands (cont.)\nCommand Purpose Example\npwd Print working directory pwd\nls List directory contents ls -la\ncd Change directory cd ~/projects\nmkdir Create directory mkdir -p path/to/dir\ntouch Create empty file touch file.txt\ncat Display file contents cat file.txt\n12",
+    "page_number": 14,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 279
+  },
+  {
+    "chunk_id": "p15_c0",
+    "text": "Essential CLI Commands (cont.)\n￿ See: Command Line Basics for MLOps\n13",
+    "page_number": 15,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 70
+  },
+  {
+    "chunk_id": "p16_c0",
+    "text": "14",
+    "page_number": 16,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p17_c0",
+    "text": "Foundations of ML Systems",
+    "page_number": 17,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 25
+  },
+  {
+    "chunk_id": "p18_c0",
+    "text": "The ML/AI Lifecycle (cont.)\nThe lifecycle is circular, not linear!\n￿ See: ML/AI Lifecycle Stages Overview\n15",
+    "page_number": 18,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 108
+  },
+  {
+    "chunk_id": "p19_c0",
+    "text": "The Six Lifecycle Stages (cont.)\nStage Description Key Output\n1. Data Collection Gather raw data from sources Raw datasets\n2. Preprocessing Clean, transform, split data Prepared features\n3. Model T raining Learn patterns from data Model artifacts\n4. Evaluation Assess performance Metrics, reports\n5. Deployment Serve predictions API endpoint\n6. Monitoring T rack production health Alerts, dashboards\n16",
+    "page_number": 19,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 402
+  },
+  {
+    "chunk_id": "p20_c0",
+    "text": "The Six Lifecycle Stages (cont.)\n￿ See: ML/AI Lifecycle Stages Overview\n17",
+    "page_number": 20,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 74
+  },
+  {
+    "chunk_id": "p21_c0",
+    "text": "What is Git? (cont.)\nGit is a distributed version control system that tracks changes to files over time.\nFor ML projects, Git tracks:\n• Code changes to training scripts and inference services\n• Configuration file updates (Y AML, JSON)\n• Documentation revisions\n• Dependency specifications\nGit does NOT eﬀiciently track:\n• Large model weights\n• Datasets (use DVC or Git LFS)\n￿ See: Git Fundamentals for MLOps\n18",
+    "page_number": 21,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 410
+  },
+  {
+    "chunk_id": "p22_c0",
+    "text": "Git’s Three States (cont.)\nState Location Description\nModified Working Directory Changes made but not staged\nStaged Staging Area Changes marked for next commit\nCommitted Repository Permanently stored snapshot\n19",
+    "page_number": 22,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 211
+  },
+  {
+    "chunk_id": "p23_c0",
+    "text": "Git’s Three States (cont.)\n￿ See: Git Fundamentals for MLOps\n20",
+    "page_number": 23,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 63
+  },
+  {
+    "chunk_id": "p24_c0",
+    "text": "Essential Git Commands (cont.)\n21",
+    "page_number": 24,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 33
+  },
+  {
+    "chunk_id": "p25_c0",
+    "text": "Essential Git Commands (cont.)\n# Initialize and clone\ngitinit\ngitclone https://github.com/username/repo.git\n# Stage and commit\ngitadd .\ngitcommit-m\"Add prediction endpoint\"\n# Branch and merge\ngitcheckout -bfeature-branch\ngitmerge feature-branch\n# Push and pull\ngitpush origin main\ngitpull origin main\n￿ See: Git Fundamentals for MLOps22",
+    "page_number": 25,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 336
+  },
+  {
+    "chunk_id": "p26_c0",
+    "text": "GitHub Repository Setup (cont.)\nGitHub provides:\n• Remote storage for Git repositories\n• Pull Requests for code review\n• Issues for bug tracking\n• Actions for CI/CD pipelines\n• Pages for documentation hosting\nMilestone 0 requires a GitHub repository as the foundation for your project.\n￿ See: GitHub Repository Setup\n23",
+    "page_number": 26,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 319
+  },
+  {
+    "chunk_id": "p27_c0",
+    "text": "Python Virtual Environments (cont.)\nAvirtual environment is an isolated Python installation with its own packages.\n# Create virtual environment\npython-mvenv venv\n# Activate (Linux/macOS)\nsource venv/bin/activate\n# Activate (Windows)\nvenv\\Scripts\\activate\n# Deactivate\ndeactivate\n24",
+    "page_number": 27,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 281
+  },
+  {
+    "chunk_id": "p28_c0",
+    "text": "Python Virtual Environments (cont.)\nLike containers for your project’s Python ecosystem!\n￿ See: Python Virtual Environments\n25",
+    "page_number": 28,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 126
+  },
+  {
+    "chunk_id": "p29_c0",
+    "text": "Why Virtual Environments Matter (cont.)\nWithout Virtual Environments With Virtual Environments\nDependency conflicts Isolation per project\n“Works on my machine” Reproducible setup\nGlobal package pollution Clean, controlled deps\nVersion chaos Pinned versions\n26",
+    "page_number": 29,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 259
+  },
+  {
+    "chunk_id": "p30_c0",
+    "text": "Why Virtual Environments Matter (cont.)\n￿ See: Python Virtual Environments\n27",
+    "page_number": 30,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 77
+  },
+  {
+    "chunk_id": "p31_c0",
+    "text": "Project Organization (cont.)\nmlops-project/\n￿￿￿ .github/\n￿ ￿￿￿ workflows/\n￿ ￿￿￿ ci.yml # GitHub Actions workflow\n￿￿￿ src/\n￿ ￿￿￿ __init__.py # Makes src a Python package\n￿￿￿ tests/\n￿ ￿￿￿ test_smoke.py # Smoke tests for CI\n￿￿￿ .gitignore # Files to exclude from Git\n￿￿￿ requirements.txt # Pinned dependencies\n￿￿￿ README.md # Project documentation\n￿ See: Project Organization for MLOps\n28",
+    "page_number": 31,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 385
+  },
+  {
+    "chunk_id": "p32_c0",
+    "text": "The .gitignore File (cont.)\n29",
+    "page_number": 32,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 30
+  },
+  {
+    "chunk_id": "p33_c0",
+    "text": "The .gitignore File (cont.)\n# Python artifacts\n__pycache__/\n*.py[cod]\n# Virtual environments\nvenv/\n.venv/\n# Data and models (use DVC)\ndata/\n*.pkl\n*.h5\n# Secrets (NEVER commit!)\n.env\nCreate .gitignore before your first commit!\n￿ See: Project Organization for MLOps30",
+    "page_number": 33,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 265
+  },
+  {
+    "chunk_id": "p34_c0",
+    "text": "31",
+    "page_number": 34,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p35_c0",
+    "text": "Reproducibility and\nDependencies",
+    "page_number": 35,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 32
+  },
+  {
+    "chunk_id": "p36_c0",
+    "text": "What is Dependency Pinning? (cont.)\nDependency pinning = specifying exact versions of packages\n# WRONG: Version ranges\nnumpy>=1.20\npandas>=1.3\n# CORRECT: Exact versions\nnumpy==1.24.3\npandas==2.0.3\n￿ See: Dependency Pinning & Reproducibility\n32",
+    "page_number": 36,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 243
+  },
+  {
+    "chunk_id": "p37_c0",
+    "text": "Why Pinning Matters (cont.)\n# Generate pinned requirements\npip freeze >requirements.txt\n# Install from pinned file\npip install -rrequirements.txt\nML systems are sensitive to version changes:\n• A minor NumPy update can alter numerical results\n• A scikit-learn upgrade can change model behavior\n• Same code + different versions = different results\n￿ See: Dependency Pinning & Reproducibility\n33",
+    "page_number": 37,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 392
+  },
+  {
+    "chunk_id": "p38_c0",
+    "text": "Version Specifier Options (cont.)\nSpecifier Meaning Use Case\n==1.2.3 Exact version Production, CI\n>=1.2.0 Minimum version Development only\n>=1.2,<2.0 Version range Major compat\n~=1.2.3 Compatible release Patch updates\n34",
+    "page_number": 38,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 220
+  },
+  {
+    "chunk_id": "p39_c0",
+    "text": "Version Specifier Options (cont.)\nRecommendation: Use== for production and CI environments.\n￿ See: Dependency Pinning & Reproducibility\n35",
+    "page_number": 39,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 138
+  },
+  {
+    "chunk_id": "p40_c0",
+    "text": "T esting Fundamentals (cont.)\nT ypes of T ests:\nT est T ype Purpose Speed\nUnit tests T est individual functions Fast (ms)\nIntegration tests T est components together Medium (s)\nSmoke tests Verify basic functionality Fast\nEnd-to-end tests T est complete workflows Slow (min)\n36",
+    "page_number": 40,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 276
+  },
+  {
+    "chunk_id": "p41_c0",
+    "text": "T esting Fundamentals (cont.)\nFor Milestone 0, you’ll write smoke tests .\n￿ See: T esting Fundamentals for ML Projects\n37",
+    "page_number": 41,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 121
+  },
+  {
+    "chunk_id": "p42_c0",
+    "text": "Smoke T est Example (cont.)\n38",
+    "page_number": 42,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 30
+  },
+  {
+    "chunk_id": "p43_c0",
+    "text": "Smoke T est Example (cont.)\n# tests/test_smoke.py\ndeftest_core_imports():\n\"\"\"Verify core ML packages are importable.\"\"\"\nimport numpy as np\nimport pandas as pd\nfrom sklearn.ensemble import RandomForestClassifier\nassertTrue\ndeftest_numpy_operations():\n\"\"\"Verify NumPy works.\"\"\"\nimport numpy as np\narr =np.array([ 1,2,3,4,5])\nassertarr.mean() ==3.0\n￿ See: T esting Fundamentals for ML Projects 39",
+    "page_number": 43,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 393
+  },
+  {
+    "chunk_id": "p44_c0",
+    "text": "Running T ests with pytest (cont.)\n# Run all tests\npytest tests/\n# Run with verbose output\npytest tests/ -v\n# Run a specific test file\npytest tests/test_smoke.py\n# Run a specific test function\npytest tests/test_smoke.py::test_imports\n￿ See: T esting Fundamentals for ML Projects\n40",
+    "page_number": 44,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 281
+  },
+  {
+    "chunk_id": "p45_c0",
+    "text": "41",
+    "page_number": 45,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p46_c0",
+    "text": "CI/CD and Automation",
+    "page_number": 46,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 20
+  },
+  {
+    "chunk_id": "p47_c0",
+    "text": "Y AML Syntax Basics (cont.)\nY AML = human-readable data serialization for configuration files\n42",
+    "page_number": 47,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 96
+  },
+  {
+    "chunk_id": "p48_c0",
+    "text": "Y AML Syntax Basics (cont.)\n# Key-value pairs\nname :my-mlops-project\nversion :\"3.10\"\n# Nested structures\nproject :\nsettings :\ndebug :true\n# Lists\ndependencies :\n-numpy\n-pandas\n43",
+    "page_number": 48,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 178
+  },
+  {
+    "chunk_id": "p49_c0",
+    "text": "Y AML Syntax Basics (cont.)\n￿ See: Y AML Syntax Basics\n44",
+    "page_number": 49,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 57
+  },
+  {
+    "chunk_id": "p50_c0",
+    "text": "Y AML Critical Rules (cont.)\nSpaces, not tabs!\n# WRONG: Tab indentation\nsteps :\n-name :Checkout\n# CORRECT: 2-space indentation\nsteps :\n-name :Checkout\nQuote version numbers!\n45",
+    "page_number": 50,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 176
+  },
+  {
+    "chunk_id": "p51_c0",
+    "text": "Y AML Critical Rules (cont.)\n# WRONG: Interpreted as 3.1\npython-version :3.10\n# CORRECT: String \"3.10\"\npython-version :\"3.10\"\n￿ See: Y AML Syntax Basics\n46",
+    "page_number": 51,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 155
+  },
+  {
+    "chunk_id": "p52_c0",
+    "text": "What is GitHub Actions? (cont.)\nGitHub Actions = CI/CD platform built into GitHub\n• Automatically runs workflows on push/PR events\n• Sets up fresh environments\n• Installs dependencies\n• Runs tests\n• Reports pass/fail status\n￿ See: GitHub Actions & CI Basics\n47",
+    "page_number": 52,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 260
+  },
+  {
+    "chunk_id": "p53_c0",
+    "text": "Basic CI Workflow (cont.)\n48",
+    "page_number": 53,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 28
+  },
+  {
+    "chunk_id": "p54_c0",
+    "text": "Basic CI Workflow (cont.)\n# .github/workflows/ci.yml\nname :CI\non :\npush :\nbranches : [main ]\npull_request :\nbranches : [main ]\njobs :\ntest :\nruns-on :ubuntu-latest\nsteps :\n-uses :actions/checkout@v4\n-uses :actions/setup-python@v5\nwith :\npython-version :\"3.10\"\n-run :pip install -r requirements.txt\n-run :pytest tests/ -v\n￿ See: GitHub Actions & CI Basics49",
+    "page_number": 54,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 356
+  },
+  {
+    "chunk_id": "p55_c0",
+    "text": "Workflow Components (cont.)\nComponent Purpose\nname Display name in GitHub UI\non Events that trigger the workflow\njobs Groups of steps that run together\nruns-on Operating system for the runner\nsteps Individual commands to execute\nuses Pre-built actions from marketplace\nrun Shell commands to execute\n50",
+    "page_number": 55,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 301
+  },
+  {
+    "chunk_id": "p56_c0",
+    "text": "Workflow Components (cont.)\n￿ See: GitHub Actions & CI Basics\n51",
+    "page_number": 56,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 64
+  },
+  {
+    "chunk_id": "p57_c0",
+    "text": "GitHub Secrets Management (cont.)\nGitHub Secrets = encrypted environment variables for sensitive data\nsteps :\n-name :Authenticate to Google Cloud\nuses :google-github-actions/auth@v2\nwith :\ncredentials_json :${{ secrets.GCP_SA_KEY }}\nNever hardcode secrets in workflow files!\n￿ See: GitHub Secrets Management\n52",
+    "page_number": 57,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 310
+  },
+  {
+    "chunk_id": "p58_c0",
+    "text": "README Documentation (cont.)\nREADME serves as the project’s front door:\n# Project Name\n![CI](https://github.com/user/repo/actions/workflows/ci.yml/badge.svg)\n## Quick Start {.allowframebreaks}\n1.Clone the repository\n2.Create virtual environment\n3.Install dependencies\n4.Run tests\n## Reproducibility Principles {.allowframebreaks}\n[150-200 words explaining your approach ]\n53",
+    "page_number": 58,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 374
+  },
+  {
+    "chunk_id": "p59_c0",
+    "text": "README Documentation (cont.)\n￿ See: README Documentation & CI Badges\n54",
+    "page_number": 59,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 71
+  },
+  {
+    "chunk_id": "p60_c0",
+    "text": "CI Status Badges (cont.)\n![CI](https://github.com/USERNAME/REPO/actions/workflows/ci.yml/badge.svg)\n• Green check: All steps passed\n• Red X: A step failed\n• Y ellow dot: Workflow in progress\nBadge proves your setup works in a clean environment!\n￿ See: README Documentation & CI Badges\n55",
+    "page_number": 60,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 287
+  },
+  {
+    "chunk_id": "p61_c0",
+    "text": "56",
+    "page_number": 61,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p62_c0",
+    "text": "Pipelines and Artifacts",
+    "page_number": 62,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 23
+  },
+  {
+    "chunk_id": "p63_c0",
+    "text": "What are Pipelines and Artifacts? (cont.)\nData Pipeline: Sequence of processing steps that transforms raw data\nArtifact: Any file produced during ML workflow that needs to be saved\n• T rained model files ( .pkl ,.h5 ,.pt )\n• Preprocessor objects (scalers, encoders)\n• Feature definitions and schemas\n• Evaluation metrics and reports\n￿ See: Data Pipelines & Model Artifacts\n57",
+    "page_number": 63,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 375
+  },
+  {
+    "chunk_id": "p64_c0",
+    "text": "Pipeline Architecture (cont.)\nEach stage produces artifacts that feed into subsequent stages.\n￿ See: Data Pipelines & Model Artifacts\n58",
+    "page_number": 64,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 136
+  },
+  {
+    "chunk_id": "p65_c0",
+    "text": "Artifact T ypes and Storage (cont.)\nArtifact T ype Format Storage\nT rained models .pkl ,.h5 Cloud storage\nPreprocessors .pkl ,.joblib Alongside model\nFeature data .parquet Data lake\nMetrics .json ,.yaml Git (small)\nConfigs .yaml ,.json Git\n59",
+    "page_number": 65,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 242
+  },
+  {
+    "chunk_id": "p66_c0",
+    "text": "Artifact T ypes and Storage (cont.)\nDon’t commit large artifacts to Git!\n￿ See: Data Pipelines & Model Artifacts\n60",
+    "page_number": 66,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 115
+  },
+  {
+    "chunk_id": "p67_c0",
+    "text": "61",
+    "page_number": 67,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p68_c0",
+    "text": "Architectural Considerations",
+    "page_number": 68,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 28
+  },
+  {
+    "chunk_id": "p69_c0",
+    "text": "What is an LLM? (cont.)\nLarge Language Model (LLM): Neural network trained on massive text data\n• Generates coherent text by predicting next token\n• Follows natural language instructions\n• Generalizes to tasks not explicitly trained for\n# Traditional ML: One model, one task\nspam_classifier.predict( \"Free money!\" ) # \"spam\"\n# LLM: One model, many tasks via prompting\nllm.generate( \"Classify as spam: 'Free money!'\" )\nllm.generate( \"Translate to Spanish: 'Hello'\" )\n￿ See: ML vs LLM System",
+    "page_number": 69,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 490
+  },
+  {
+    "chunk_id": "p69_c1",
+    "text": ")\nllm.generate( \"Translate to Spanish: 'Hello'\" )\n￿ See: ML vs LLM System Architectures\n62",
+    "page_number": 69,
+    "source": "module1-slides.pdf",
+    "start_char": 415,
+    "end_char": 506
+  },
+  {
+    "chunk_id": "p70_c0",
+    "text": "ML vs LLM Comparison (cont.)\nAspect T raditional ML LLM Systems\nModel source T rained in-house Pre-trained via API\nData requirements Labeled training data Prompts, few-shot examples\nCustomization Feature engineering Prompt engineering\nArtifacts Model files Prompt templates\nInference cost Predictable Variable (token count)\nLatency Milliseconds Seconds\n63",
+    "page_number": 70,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 355
+  },
+  {
+    "chunk_id": "p71_c0",
+    "text": "ML vs LLM Comparison (cont.)\n￿ See: ML vs LLM System Architectures\n64",
+    "page_number": 71,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 69
+  },
+  {
+    "chunk_id": "p72_c0",
+    "text": "T raditional ML Architecture (cont.)\nimport joblib\nmodel =joblib.load( \"model.pkl\" )\ndefpredict(features: dict) ->float:\nreturnmodel.predict([features])[ 0]\n￿ See: ML vs LLM System Architectures\n65",
+    "page_number": 72,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 197
+  },
+  {
+    "chunk_id": "p73_c0",
+    "text": "LLM System Architecture (cont.)\nresponse =client.chat.completions.create(\nmodel =\"gpt-4\",\nmessages =[{\"role\":\"user\",\"content\" : prompt}]\n)\n￿ See: ML vs LLM System Architectures\n66",
+    "page_number": 73,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 179
+  },
+  {
+    "chunk_id": "p74_c0",
+    "text": "T echnical Debt in ML Systems (cont.)\nT echnical debt = implied cost of future rework from quick solutions\nCategory Description Prevention\nDependency debt Hidden data dependencies Data contracts\nGlue code Boilerplate connecting\ncomponentsPipeline abstractions\nConfiguration debt Scattered settings Centralized configs\nData testing debt Untested data assumptions Schema validation\n67",
+    "page_number": 74,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 382
+  },
+  {
+    "chunk_id": "p75_c0",
+    "text": "T echnical Debt in ML Systems (cont.)\n￿ See: T echnical Debt in ML Systems\n68",
+    "page_number": 75,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 77
+  },
+  {
+    "chunk_id": "p76_c0",
+    "text": "Preventing T echnical Debt (cont.)\nThe practices you establish in Milestone 0 are debt-prevention strategies:\n• Pin dependencies → Prevents configuration debt\n• Use version control → Enables experiment tracking\n• Set up CI → Catches integration problems early\n• Document data contracts → Prevents dependency debt\n￿ See: T echnical Debt in ML Systems\n69",
+    "page_number": 76,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 352
+  },
+  {
+    "chunk_id": "p77_c0",
+    "text": "70",
+    "page_number": 77,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p78_c0",
+    "text": "Hands-On Demos",
+    "page_number": 78,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 14
+  },
+  {
+    "chunk_id": "p79_c0",
+    "text": "Demo: Dependency Pinning MWE (cont.)\n# Clone and navigate\ncd src/module1/learning-activities/mwe/dependency-pinning\n# Create environment\npython-mvenv venv\nsource venv/bin/activate\n# Install pinned dependencies\npip install -rrequirements.txt\n# Run demonstration\npython main.py\nIf your teammate gets a DIFFERENT hash, your environments differ!\n71",
+    "page_number": 79,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 344
+  },
+  {
+    "chunk_id": "p80_c0",
+    "text": "Demo: Expected Output (cont.)\n============================================================\nDEPENDENCY PINNING - Reproducibility Demonstration\n============================================================\nEnvironment Snapshot:\nPython: 3.10.x\nNumPy: 1.24.3\nHash: <16-char-hash>\n￿ Numerical Results (seed=42):\nMean: 0.0044569909\nStd: 0.9920438018\nKey Insight:\n72",
+    "page_number": 80,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 358
+  },
+  {
+    "chunk_id": "p81_c0",
+    "text": "Demo: Expected Output (cont.)\nThis is why we pin dependencies with exact versions (==).\n============================================================\n73",
+    "page_number": 81,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 151
+  },
+  {
+    "chunk_id": "p82_c0",
+    "text": "74",
+    "page_number": 82,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p83_c0",
+    "text": "Lab Exercise",
+    "page_number": 83,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 12
+  },
+  {
+    "chunk_id": "p84_c0",
+    "text": "Lab: Environment Setup (cont.)\nTime: ~30 minutes\nParts:\n1. ML Lifecycle Classification - Map code snippets to lifecycle stages\n2. Dependency Pinning - Convert ranges to exact versions\n3. Project Organization - Identify files for .gitignore\n4. Smoke T ests - Write basic import and operation tests\npython src/module1/learning-activities/lab/environment-setup.py\n75",
+    "page_number": 84,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 363
+  },
+  {
+    "chunk_id": "p85_c0",
+    "text": "76",
+    "page_number": 85,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p86_c0",
+    "text": "Assessments",
+    "page_number": 86,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 11
+  },
+  {
+    "chunk_id": "p87_c0",
+    "text": "Milestone 0: Environment & CI Setup (cont.)\nDeliverables:\n1. GitHub Repository with pinned dependencies and clear structure\n2. GitHub Actions Workflow that runs smoke tests\n3. Documentation (150-200 words) on reproducibility\nRubric (5 pts):\n• (2 pts) Environment reproducibility\n• (2 pts) Working CI smoke test with green badge\n• (1 pt) Documentation quality\n77",
+    "page_number": 87,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 361
+  },
+  {
+    "chunk_id": "p88_c0",
+    "text": "Homework Assignments (cont.)\nHomework T opic\n1.1 ML/AI Lifecycle Visualization\n1.2 T echnical Debt Analysis\n1.3 ML vs LLM Architecture Comparison\n1.4 Ethical T rade-offs Case Study\n78",
+    "page_number": 88,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 183
+  },
+  {
+    "chunk_id": "p89_c0",
+    "text": "79",
+    "page_number": 89,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 2
+  },
+  {
+    "chunk_id": "p90_c0",
+    "text": "Key T akeaways",
+    "page_number": 90,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 14
+  },
+  {
+    "chunk_id": "p91_c0",
+    "text": "Key T akeaways (cont.)\n1. The ML lifecycle is circular - Monitoring feeds back into data collection\n2. Reproducibility requires discipline - Pin dependencies, use virtual environments, automate\nwith CI\n3. LLMs change the paradigm - From “building models” to “building systems around models”\n4. T echnical debt compounds - Invest in infrastructure early to prevent costly rework\n80",
+    "page_number": 91,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 380
+  },
+  {
+    "chunk_id": "p92_c0",
+    "text": "Next Module Preview (cont.)\nModule 2: Web & Serverless Model Serving\nHow do companies like Stripe serve fraud predictions in under 50ms?\n• Deploy ML models as production-ready web services\n• Build FastAPI endpoints\n• Containerize with Docker\n• Deploy to Cloud Run and Cloud Functions\n81",
+    "page_number": 92,
+    "source": "module1-slides.pdf",
+    "start_char": 0,
+    "end_char": 286
+  }
+]
