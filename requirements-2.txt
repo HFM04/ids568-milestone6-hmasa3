@@ -1,0 +1,8 @@
+faiss-cpu==1.7.4
+sentence-transformers==2.2.2
+transformers==4.30.2
+huggingface_hub==0.14.1
+tokenizers==0.13.3
+pypdf==4.0.1
+requests==2.31.0
+numpy==1.26.4

@@ -1,0 +1,538 @@
+{
+  "summary": {
+    "num_queries": 10,
+    "k": 4,
+    "avg_precision_at_k": 0.425,
+    "avg_recall_at_k": 0.6666666666666666,
+    "avg_mrr": 0.7,
+    "avg_retrieval_ms": 246.26570410036948,
+    "avg_generation_ms": 18427.77453739982,
+    "avg_end_to_end_ms": 18674.67977910128
+  },
+  "results": [
+    {
+      "query": "What are the six stages of the ML/AI lifecycle?",
+      "relevant_pages": [
+        19
+      ],
+      "retrieved_pages": [
+        20,
+        18,
+        91,
+        5
+      ],
+      "precision_at_k": 0.0,
+      "recall_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "answer": "The provided context does not explicitly list the six stages of the ML/AI lifecycle, but it is implied that they will be covered in the slides. However, since the question asks for the stages, I would infer that the six stages are likely to be:\n\n1. Data Collection (implied from Chunk 3 - \"Monitoring feeds back into data collection\")\n2. Data Preparation\n3. Model Training\n4. Model Validation\n5. Deployment\n6. Monitoring and Maintenance (implicit from Chunk 3 - \"Monitoring feeds back into data collection\" and Chunk 1 - \"The Six Lifecycle Stages\")\n\nThis inference is supported by the context, as these stages are common in many machine learning lifecycles and align with the information provided about the circular nature of the ML/AI lifecycle. However, without explicit confirmation from the slides, this answer should be considered an educated guess.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p20_c0",
+          "page_number": 20,
+          "source": "module1-slides.pdf",
+          "text": "The Six Lifecycle Stages (cont.)\n￿ See: ML/AI Lifecycle Stages Overview\n17",
+          "score": 0.9190912246704102
+        },
+        {
+          "chunk_id": "p18_c0",
+          "page_number": 18,
+          "source": "module1-slides.pdf",
+          "text": "The ML/AI Lifecycle (cont.)\nThe lifecycle is circular, not linear!\n￿ See: ML/AI Lifecycle Stages Overview\n15",
+          "score": 0.6038418412208557
+        },
+        {
+          "chunk_id": "p91_c0",
+          "page_number": 91,
+          "source": "module1-slides.pdf",
+          "text": "Key T akeaways (cont.)\n1. The ML lifecycle is circular - Monitoring feeds back into data collection\n2. Reproducibility requires discipline - Pin dependencies, use virtual environments, automate\nwith CI\n3. LLMs change the paradigm - From “building models” to “building systems around models”\n4. T echnical debt compounds - Invest in infrastructure early to prevent costly rework\n80",
+          "score": 0.5711650848388672
+        },
+        {
+          "chunk_id": "p5_c0",
+          "page_number": 5,
+          "source": "module1-slides.pdf",
+          "text": "What Y ou’ll Learn (cont.)\nBy the end of this module, you will be able to:\n1. Map any ML project to the six lifecycle stages\n2. Set up reproducible project environments with version control\n3. Distinguish between traditional ML and LLM-based system architectures\n4. Identify and prevent common sources of ML technical debt\n4",
+          "score": 0.5476370453834534
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 212.83420799591113,
+        "generation_ms": 29604.941500001587,
+        "end_to_end_ms": 29817.823249992216
+      }
+    },
+    {
+      "query": "Why is the ML lifecycle described as circular rather than linear?",
+      "relevant_pages": [
+        18,
+        91
+      ],
+      "retrieved_pages": [
+        18,
+        20,
+        91,
+        88
+      ],
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "answer": "The ML lifecycle is described as circular rather than linear because it is a continuous process where monitoring feeds back into data collection, as mentioned in Chunk 3 (Page 91). This means that after deploying a model, the results are monitored and the insights gained can be used to improve the data collection process for future iterations.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p18_c0",
+          "page_number": 18,
+          "source": "module1-slides.pdf",
+          "text": "The ML/AI Lifecycle (cont.)\nThe lifecycle is circular, not linear!\n￿ See: ML/AI Lifecycle Stages Overview\n15",
+          "score": 0.8040820360183716
+        },
+        {
+          "chunk_id": "p20_c0",
+          "page_number": 20,
+          "source": "module1-slides.pdf",
+          "text": "The Six Lifecycle Stages (cont.)\n￿ See: ML/AI Lifecycle Stages Overview\n17",
+          "score": 0.49308398365974426
+        },
+        {
+          "chunk_id": "p91_c0",
+          "page_number": 91,
+          "source": "module1-slides.pdf",
+          "text": "Key T akeaways (cont.)\n1. The ML lifecycle is circular - Monitoring feeds back into data collection\n2. Reproducibility requires discipline - Pin dependencies, use virtual environments, automate\nwith CI\n3. LLMs change the paradigm - From “building models” to “building systems around models”\n4. T echnical debt compounds - Invest in infrastructure early to prevent costly rework\n80",
+          "score": 0.44630497694015503
+        },
+        {
+          "chunk_id": "p88_c0",
+          "page_number": 88,
+          "source": "module1-slides.pdf",
+          "text": "Homework Assignments (cont.)\nHomework T opic\n1.1 ML/AI Lifecycle Visualization\n1.2 T echnical Debt Analysis\n1.3 ML vs LLM Architecture Comparison\n1.4 Ethical T rade-offs Case Study\n78",
+          "score": 0.32818812131881714
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 676.3348750100704,
+        "generation_ms": 13616.236290996312,
+        "end_to_end_ms": 14293.26495800342
+      }
+    },
+    {
+      "query": "What does Git track well in ML projects and what does it not track efficiently?",
+      "relevant_pages": [
+        21
+      ],
+      "retrieved_pages": [
+        21,
+        23,
+        25,
+        26
+      ],
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "answer": "In ML projects, Git tracks code changes to training scripts and inference services, configuration file updates (YAML, JSON), documentation revisions, and dependency specifications. However, it does not track large model weights or datasets efficiently. For these, it is recommended to use DVC or Git LFS instead.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p21_c0",
+          "page_number": 21,
+          "source": "module1-slides.pdf",
+          "text": "What is Git? (cont.)\nGit is a distributed version control system that tracks changes to files over time.\nFor ML projects, Git tracks:\n• Code changes to training scripts and inference services\n• Configuration file updates (Y AML, JSON)\n• Documentation revisions\n• Dependency specifications\nGit does NOT eﬀiciently track:\n• Large model weights\n• Datasets (use DVC or Git LFS)\n￿ See: Git Fundamentals for MLOps\n18",
+          "score": 0.7202563285827637
+        },
+        {
+          "chunk_id": "p23_c0",
+          "page_number": 23,
+          "source": "module1-slides.pdf",
+          "text": "Git’s Three States (cont.)\n￿ See: Git Fundamentals for MLOps\n20",
+          "score": 0.5269951224327087
+        },
+        {
+          "chunk_id": "p25_c0",
+          "page_number": 25,
+          "source": "module1-slides.pdf",
+          "text": "Essential Git Commands (cont.)\n# Initialize and clone\ngitinit\ngitclone https://github.com/username/repo.git\n# Stage and commit\ngitadd .\ngitcommit-m\"Add prediction endpoint\"\n# Branch and merge\ngitcheckout -bfeature-branch\ngitmerge feature-branch\n# Push and pull\ngitpush origin main\ngitpull origin main\n￿ See: Git Fundamentals for MLOps22",
+          "score": 0.4855092167854309
+        },
+        {
+          "chunk_id": "p26_c0",
+          "page_number": 26,
+          "source": "module1-slides.pdf",
+          "text": "GitHub Repository Setup (cont.)\nGitHub provides:\n• Remote storage for Git repositories\n• Pull Requests for code review\n• Issues for bug tracking\n• Actions for CI/CD pipelines\n• Pages for documentation hosting\nMilestone 0 requires a GitHub repository as the foundation for your project.\n￿ See: GitHub Repository Setup\n23",
+          "score": 0.4630356729030609
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 312.64391700096894,
+        "generation_ms": 12241.608666998218,
+        "end_to_end_ms": 12554.841958000907
+      }
+    },
+    {
+      "query": "Why do virtual environments matter in MLOps?",
+      "relevant_pages": [
+        27,
+        29
+      ],
+      "retrieved_pages": [
+        30,
+        29,
+        13,
+        1
+      ],
+      "precision_at_k": 0.25,
+      "recall_at_k": 0.5,
+      "reciprocal_rank": 0.5,
+      "answer": "Virtual environments matter in MLOps for several reasons as stated on pages 29 and 30 of the provided slide deck. They help to avoid dependency conflicts, provide isolation per project, ensure a reproducible setup, prevent global package pollution, control version chaos, and maintain clean, controlled dependencies by pinning versions. Additionally, virtual environments are created and activated via the command line (CLI), which is crucial for MLOps as mentioned on page 13 of the slide deck.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p30_c0",
+          "page_number": 30,
+          "source": "module1-slides.pdf",
+          "text": "Why Virtual Environments Matter (cont.)\n￿ See: Python Virtual Environments\n27",
+          "score": 0.640186071395874
+        },
+        {
+          "chunk_id": "p29_c0",
+          "page_number": 29,
+          "source": "module1-slides.pdf",
+          "text": "Why Virtual Environments Matter (cont.)\nWithout Virtual Environments With Virtual Environments\nDependency conflicts Isolation per project\n“Works on my machine” Reproducible setup\nGlobal package pollution Clean, controlled deps\nVersion chaos Pinned versions\n26",
+          "score": 0.6128970980644226
+        },
+        {
+          "chunk_id": "p13_c0",
+          "page_number": 13,
+          "source": "module1-slides.pdf",
+          "text": "Command Line Basics (cont.)\nWhy CLI matters for MLOps:\n• Git is primarily a command-line tool\n• Virtual environments are created and activated via CLI\n• CI pipelines execute shell commands\n• Docker and Kubernetes are controlled via CLI\n• Remote servers typically only have CLI access\n￿ See: Command Line Basics for MLOps\n11",
+          "score": 0.5100424289703369
+        },
+        {
+          "chunk_id": "p1_c0",
+          "page_number": 1,
+          "source": "module1-slides.pdf",
+          "text": "Module 1: Introduction to MLOps\nProduction AI: An Engineering Guide\nTheja T ulabandhula\nJanuary 10, 2026\nUniversity of Illinois Chicago\n1",
+          "score": 0.5056552886962891
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 143.01583300402854,
+        "generation_ms": 14353.04108299897,
+        "end_to_end_ms": 14496.660417004023
+      }
+    },
+    {
+      "query": "What is dependency pinning and why is it important for reproducibility?",
+      "relevant_pages": [
+        36,
+        37,
+        39
+      ],
+      "retrieved_pages": [
+        36,
+        37,
+        35,
+        81
+      ],
+      "precision_at_k": 0.5,
+      "recall_at_k": 0.6666666666666666,
+      "reciprocal_rank": 1.0,
+      "answer": "Dependency pinning refers to the practice of specifying exact versions of packages in a software project. This is done to ensure that the same code will produce the same results every time, regardless of any changes made to the underlying libraries or packages.\n\nDependency pinning is important for reproducibility because machine learning systems are sensitive to version changes. Even minor updates to libraries like NumPy can alter numerical results, while upgrades to scikit-learn can change model behavior. By using exact versions of dependencies, we can ensure that the same code will always produce the same output.\n\n(Citations: Chunk 1 from page 36, Chunk 2 from page 37, and Chunk 4 from page 81 in the provided context)",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p36_c0",
+          "page_number": 36,
+          "source": "module1-slides.pdf",
+          "text": "What is Dependency Pinning? (cont.)\nDependency pinning = specifying exact versions of packages\n# WRONG: Version ranges\nnumpy>=1.20\npandas>=1.3\n# CORRECT: Exact versions\nnumpy==1.24.3\npandas==2.0.3\n￿ See: Dependency Pinning & Reproducibility\n32",
+          "score": 0.6354754567146301
+        },
+        {
+          "chunk_id": "p37_c0",
+          "page_number": 37,
+          "source": "module1-slides.pdf",
+          "text": "Why Pinning Matters (cont.)\n# Generate pinned requirements\npip freeze >requirements.txt\n# Install from pinned file\npip install -rrequirements.txt\nML systems are sensitive to version changes:\n• A minor NumPy update can alter numerical results\n• A scikit-learn upgrade can change model behavior\n• Same code + different versions = different results\n￿ See: Dependency Pinning & Reproducibility\n33",
+          "score": 0.6102511882781982
+        },
+        {
+          "chunk_id": "p35_c0",
+          "page_number": 35,
+          "source": "module1-slides.pdf",
+          "text": "Reproducibility and\nDependencies",
+          "score": 0.57180255651474
+        },
+        {
+          "chunk_id": "p81_c0",
+          "page_number": 81,
+          "source": "module1-slides.pdf",
+          "text": "Demo: Expected Output (cont.)\nThis is why we pin dependencies with exact versions (==).\n============================================================\n73",
+          "score": 0.45331886410713196
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 170.65887499484234,
+        "generation_ms": 20508.648374991026,
+        "end_to_end_ms": 20679.92570801289
+      }
+    },
+    {
+      "query": "What types of tests are mentioned and which tests are required for Milestone 0?",
+      "relevant_pages": [
+        40,
+        41,
+        43,
+        44
+      ],
+      "retrieved_pages": [
+        41,
+        87,
+        40,
+        76
+      ],
+      "precision_at_k": 0.5,
+      "recall_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "answer": "The types of tests mentioned are Unit tests, Integration tests, Smoke tests, and End-to-end tests. However, for Milestone 0, only Smoke tests are required. [Chunk 2 | Page: 77]",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p41_c0",
+          "page_number": 41,
+          "source": "module1-slides.pdf",
+          "text": "T esting Fundamentals (cont.)\nFor Milestone 0, you’ll write smoke tests .\n￿ See: T esting Fundamentals for ML Projects\n37",
+          "score": 0.6594237089157104
+        },
+        {
+          "chunk_id": "p87_c0",
+          "page_number": 87,
+          "source": "module1-slides.pdf",
+          "text": "Milestone 0: Environment & CI Setup (cont.)\nDeliverables:\n1. GitHub Repository with pinned dependencies and clear structure\n2. GitHub Actions Workflow that runs smoke tests\n3. Documentation (150-200 words) on reproducibility\nRubric (5 pts):\n• (2 pts) Environment reproducibility\n• (2 pts) Working CI smoke test with green badge\n• (1 pt) Documentation quality\n77",
+          "score": 0.5173628926277161
+        },
+        {
+          "chunk_id": "p40_c0",
+          "page_number": 40,
+          "source": "module1-slides.pdf",
+          "text": "T esting Fundamentals (cont.)\nT ypes of T ests:\nT est T ype Purpose Speed\nUnit tests T est individual functions Fast (ms)\nIntegration tests T est components together Medium (s)\nSmoke tests Verify basic functionality Fast\nEnd-to-end tests T est complete workflows Slow (min)\n36",
+          "score": 0.41187548637390137
+        },
+        {
+          "chunk_id": "p76_c0",
+          "page_number": 76,
+          "source": "module1-slides.pdf",
+          "text": "Preventing T echnical Debt (cont.)\nThe practices you establish in Milestone 0 are debt-prevention strategies:\n• Pin dependencies → Prevents configuration debt\n• Use version control → Enables experiment tracking\n• Set up CI → Catches integration problems early\n• Document data contracts → Prevents dependency debt\n￿ See: T echnical Debt in ML Systems\n69",
+          "score": 0.4040640592575073
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 185.89558299572673,
+        "generation_ms": 10712.021500003175,
+        "end_to_end_ms": 10898.77116700518
+      }
+    },
+    {
+      "query": "What does the sample GitHub Actions workflow do?",
+      "relevant_pages": [
+        52,
+        54,
+        55
+      ],
+      "retrieved_pages": [
+        52,
+        56,
+        54,
+        55
+      ],
+      "precision_at_k": 0.75,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "answer": "The sample GitHub Actions workflow, as shown in Chunk 3, is a basic Continuous Integration (CI) workflow. It automatically runs when there's a push or pull request on the 'main' branch. The workflow sets up an environment using Ubuntu-latest, checks out the code, installs Python version 3.10, and its dependencies specified in requirements.txt, then runs tests on the 'tests/' directory. If successful, it reports a pass status; if not, it reports a fail status. (Referenced pages: 49, 52, 54, 55)",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p52_c0",
+          "page_number": 52,
+          "source": "module1-slides.pdf",
+          "text": "What is GitHub Actions? (cont.)\nGitHub Actions = CI/CD platform built into GitHub\n• Automatically runs workflows on push/PR events\n• Sets up fresh environments\n• Installs dependencies\n• Runs tests\n• Reports pass/fail status\n￿ See: GitHub Actions & CI Basics\n47",
+          "score": 0.8174117207527161
+        },
+        {
+          "chunk_id": "p56_c0",
+          "page_number": 56,
+          "source": "module1-slides.pdf",
+          "text": "Workflow Components (cont.)\n￿ See: GitHub Actions & CI Basics\n51",
+          "score": 0.678827166557312
+        },
+        {
+          "chunk_id": "p54_c0",
+          "page_number": 54,
+          "source": "module1-slides.pdf",
+          "text": "Basic CI Workflow (cont.)\n# .github/workflows/ci.yml\nname :CI\non :\npush :\nbranches : [main ]\npull_request :\nbranches : [main ]\njobs :\ntest :\nruns-on :ubuntu-latest\nsteps :\n-uses :actions/checkout@v4\n-uses :actions/setup-python@v5\nwith :\npython-version :\"3.10\"\n-run :pip install -r requirements.txt\n-run :pytest tests/ -v\n￿ See: GitHub Actions & CI Basics49",
+          "score": 0.547939121723175
+        },
+        {
+          "chunk_id": "p55_c0",
+          "page_number": 55,
+          "source": "module1-slides.pdf",
+          "text": "Workflow Components (cont.)\nComponent Purpose\nname Display name in GitHub UI\non Events that trigger the workflow\njobs Groups of steps that run together\nruns-on Operating system for the runner\nsteps Individual commands to execute\nuses Pre-built actions from marketplace\nrun Shell commands to execute\n50",
+          "score": 0.5229854583740234
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 162.56224999960978,
+        "generation_ms": 19438.39525000658,
+        "end_to_end_ms": 19601.471292000497
+      }
+    },
+    {
+      "query": "What are artifacts in ML pipelines? Give some examples.",
+      "relevant_pages": [
+        63,
+        65
+      ],
+      "retrieved_pages": [
+        62,
+        63,
+        64,
+        2
+      ],
+      "precision_at_k": 0.25,
+      "recall_at_k": 0.5,
+      "reciprocal_rank": 0.5,
+      "answer": "Artifacts in Machine Learning (ML) pipelines refer to any files produced during the ML workflow that need to be saved. Examples of artifacts include trained model files such as .pkl, .h5, and .pt; preprocessor objects like scalers and encoders; feature definitions and schemas; evaluation metrics and reports (referenced on pages 62-64 in the provided context).",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p62_c0",
+          "page_number": 62,
+          "source": "module1-slides.pdf",
+          "text": "Pipelines and Artifacts",
+          "score": 0.8337895274162292
+        },
+        {
+          "chunk_id": "p63_c0",
+          "page_number": 63,
+          "source": "module1-slides.pdf",
+          "text": "What are Pipelines and Artifacts? (cont.)\nData Pipeline: Sequence of processing steps that transforms raw data\nArtifact: Any file produced during ML workflow that needs to be saved\n• T rained model files ( .pkl ,.h5 ,.pt )\n• Preprocessor objects (scalers, encoders)\n• Feature definitions and schemas\n• Evaluation metrics and reports\n￿ See: Data Pipelines & Model Artifacts\n57",
+          "score": 0.8244843482971191
+        },
+        {
+          "chunk_id": "p64_c0",
+          "page_number": 64,
+          "source": "module1-slides.pdf",
+          "text": "Pipeline Architecture (cont.)\nEach stage produces artifacts that feed into subsequent stages.\n￿ See: Data Pipelines & Model Artifacts\n58",
+          "score": 0.6953184604644775
+        },
+        {
+          "chunk_id": "p2_c0",
+          "page_number": 2,
+          "source": "module1-slides.pdf",
+          "text": "Overview\nGetting Started (Prerequisites)\nFoundations of ML Systems\nReproducibility and Dependencies\nCI/CD and Automation\nPipelines and Artifacts\nArchitectural Considerations\nHands-On Demos\nLab Exercise\nAssessments\nKey T akeaways\n2",
+          "score": 0.4970499277114868
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 163.02474999974947,
+        "generation_ms": 13656.275040993933,
+        "end_to_end_ms": 13819.918458000757
+      }
+    },
+    {
+      "query": "How do traditional ML systems differ from LLM systems?",
+      "relevant_pages": [
+        69,
+        70,
+        72,
+        73
+      ],
+      "retrieved_pages": [
+        71,
+        70,
+        69,
+        69
+      ],
+      "precision_at_k": 0.75,
+      "recall_at_k": 0.5,
+      "reciprocal_rank": 0.5,
+      "answer": "Traditional Machine Learning (ML) systems and Large Language Models (LLMs) differ in several aspects.\n\n1. Model source: Traditional ML models are typically trained in-house, while LLMs are pre-trained via API.\n2. Data requirements: ML systems require labeled training data, whereas LLMs use prompts and few-shot examples.\n3. Customization: Feature engineering is used for customization in traditional ML, while prompt engineering is used for LLMs.\n4. Artifacts: Model files are the artifacts produced by traditional ML, while prompt templates are the artifacts for LLMs.\n5. Inference cost: The inference cost for traditional ML is predictable, whereas it is variable (depending on token count) for LLMs.\n6. Latency: Inference latency for traditional ML is measured in milliseconds, while it can be seconds for LLMs.\n7. Task versatility: Traditional ML models are designed for one specific task, while LLMs can perform many tasks via prompting. (Reference pages 69-71)",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p71_c0",
+          "page_number": 71,
+          "source": "module1-slides.pdf",
+          "text": "ML vs LLM Comparison (cont.)\n￿ See: ML vs LLM System Architectures\n64",
+          "score": 0.7061659097671509
+        },
+        {
+          "chunk_id": "p70_c0",
+          "page_number": 70,
+          "source": "module1-slides.pdf",
+          "text": "ML vs LLM Comparison (cont.)\nAspect T raditional ML LLM Systems\nModel source T rained in-house Pre-trained via API\nData requirements Labeled training data Prompts, few-shot examples\nCustomization Feature engineering Prompt engineering\nArtifacts Model files Prompt templates\nInference cost Predictable Variable (token count)\nLatency Milliseconds Seconds\n63",
+          "score": 0.7010844945907593
+        },
+        {
+          "chunk_id": "p69_c0",
+          "page_number": 69,
+          "source": "module1-slides.pdf",
+          "text": "What is an LLM? (cont.)\nLarge Language Model (LLM): Neural network trained on massive text data\n• Generates coherent text by predicting next token\n• Follows natural language instructions\n• Generalizes to tasks not explicitly trained for\n# Traditional ML: One model, one task\nspam_classifier.predict( \"Free money!\" ) # \"spam\"\n# LLM: One model, many tasks via prompting\nllm.generate( \"Classify as spam: 'Free money!'\" )\nllm.generate( \"Translate to Spanish: 'Hello'\" )\n￿ See: ML vs LLM System",
+          "score": 0.6189296841621399
+        },
+        {
+          "chunk_id": "p69_c1",
+          "page_number": 69,
+          "source": "module1-slides.pdf",
+          "text": ")\nllm.generate( \"Translate to Spanish: 'Hello'\" )\n￿ See: ML vs LLM System Architectures\n62",
+          "score": 0.5968713760375977
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 225.9179579996271,
+        "generation_ms": 29616.84529201011,
+        "end_to_end_ms": 29843.962915998418
+      }
+    },
+    {
+      "query": "What kinds of technical debt are mentioned in ML systems and how can they be prevented?",
+      "relevant_pages": [
+        74,
+        76
+      ],
+      "retrieved_pages": [
+        75,
+        74,
+        76,
+        91
+      ],
+      "precision_at_k": 0.5,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "answer": "In Machine Learning (ML) systems, the following types of technical debt are mentioned:\n\n1. Dependency Debt: This occurs due to hidden data dependencies. To prevent this, it is recommended to document data contracts.\n\n2. Configuration Debt: This arises from scattered settings. Prevention strategies include centralizing configurations and setting up Continuous Integration (CI).\n\n3. Data Testing Debt: This results from untested data assumptions. Schema validation can help prevent this.\n\nTo prevent these debts, the practices established in Milestone 0 should include pinning dependencies, using version control, setting up CI, and documenting data contracts.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "p75_c0",
+          "page_number": 75,
+          "source": "module1-slides.pdf",
+          "text": "T echnical Debt in ML Systems (cont.)\n￿ See: T echnical Debt in ML Systems\n68",
+          "score": 0.7694748640060425
+        },
+        {
+          "chunk_id": "p74_c0",
+          "page_number": 74,
+          "source": "module1-slides.pdf",
+          "text": "T echnical Debt in ML Systems (cont.)\nT echnical debt = implied cost of future rework from quick solutions\nCategory Description Prevention\nDependency debt Hidden data dependencies Data contracts\nGlue code Boilerplate connecting\ncomponentsPipeline abstractions\nConfiguration debt Scattered settings Centralized configs\nData testing debt Untested data assumptions Schema validation\n67",
+          "score": 0.7385833263397217
+        },
+        {
+          "chunk_id": "p76_c0",
+          "page_number": 76,
+          "source": "module1-slides.pdf",
+          "text": "Preventing T echnical Debt (cont.)\nThe practices you establish in Milestone 0 are debt-prevention strategies:\n• Pin dependencies → Prevents configuration debt\n• Use version control → Enables experiment tracking\n• Set up CI → Catches integration problems early\n• Document data contracts → Prevents dependency debt\n￿ See: T echnical Debt in ML Systems\n69",
+          "score": 0.6443027257919312
+        },
+        {
+          "chunk_id": "p91_c0",
+          "page_number": 91,
+          "source": "module1-slides.pdf",
+          "text": "Key T akeaways (cont.)\n1. The ML lifecycle is circular - Monitoring feeds back into data collection\n2. Reproducibility requires discipline - Pin dependencies, use virtual environments, automate\nwith CI\n3. LLMs change the paradigm - From “building models” to “building systems around models”\n4. T echnical debt compounds - Invest in infrastructure early to prevent costly rework\n80",
+          "score": 0.5707448720932007
+        }
+      ],
+      "timings_ms": {
+        "retrieval_ms": 209.76879200316034,
+        "generation_ms": 20529.732374998275,
+        "end_to_end_ms": 20740.15766699449
+      }
+    }
+  ]
+}
